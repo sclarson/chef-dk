@@ -1,9 +1,86 @@
 GIT
-  remote: git://github.com/chef/appbundler.git
-  revision: a8376ff735ec63d6f4e3cffe971223516890239c
+  remote: git://github.com/berkshelf/berkshelf-api-client.git
+  revision: 24a18718775188856cd4b15494be8432aa0d30f5
+  branch: jk/freeeeedom
   specs:
-    appbundler (0.9.0)
-      mixlib-cli (~> 1.4)
+    berkshelf-api-client (2.0.2)
+      faraday (~> 0.9.1)
+      httpclient (~> 2.7)
+      ridley (~> 4.5)
+
+GIT
+  remote: git://github.com/berkshelf/berkshelf.git
+  revision: 1509438bb28331e70d317d9e121d9611858b4a3c
+  branch: jk/freeeeedom
+  specs:
+    berkshelf (4.3.6)
+      addressable (~> 2.3, >= 2.3.4)
+      berkshelf-api-client (~> 2.0, >= 2.0.2)
+      buff-config (~> 1.0)
+      buff-extensions (~> 2.0)
+      buff-shell_out (~> 0.1)
+      cleanroom (~> 1.0)
+      faraday (~> 0.9)
+      httpclient (~> 2.7)
+      minitar (~> 0.5, >= 0.5.4)
+      mixlib-archive (~> 0.1)
+      octokit (~> 4.0)
+      retryable (~> 2.0)
+      ridley (~> 4.6)
+      solve (>= 2.0, < 4)
+      thor (~> 0.19)
+
+GIT
+  remote: git://github.com/berkshelf/buff-config.git
+  revision: 4cdd1e6bc70dfdaf8ddb5b5668dff15d9abbc03d
+  branch: jk/freeeeedom
+  specs:
+    buff-config (1.0.1)
+      buff-extensions (~> 2.0)
+      varia_model (~> 0.4)
+
+GIT
+  remote: git://github.com/berkshelf/ridley.git
+  revision: 9ff57ec89271aa30cbad8df6ef9054beb4b7a006
+  branch: jk/freeeeedom
+  specs:
+    ridley (4.6.1)
+      addressable
+      buff-config (~> 1.0)
+      buff-extensions (~> 2.0)
+      buff-ignore (~> 1.2)
+      buff-shell_out (~> 0.1)
+      celluloid (~> 0.16.0)
+      celluloid-io (~> 0.16.1)
+      chef-config (>= 12.5.0)
+      erubis
+      faraday (~> 0.9.0)
+      hashie (>= 2.0.2, < 4.0.0)
+      httpclient (~> 2.7)
+      json (>= 1.7.7)
+      mixlib-authentication (>= 1.3.0)
+      retryable (~> 2.0)
+      semverse (>= 1.1, < 3)
+      varia_model (~> 0.4)
+
+GIT
+  remote: git://github.com/berkshelf/solve.git
+  revision: 75f68558781a8663fc2f1132cdd6cc08580e7c17
+  branch: jk/freeeeedom
+  specs:
+    solve (3.0.0)
+      molinillo (~> 0.4)
+      semverse (>= 1.1, < 3)
+
+GIT
+  remote: git://github.com/chef/chef.git
+  revision: 2458a737d6f97fefe60a97df66a1398004a39448
+  branch: jk/msys2
+  specs:
+    chef-config (12.12.15)
+      fuzzyurl
+      mixlib-config (~> 2.0)
+      mixlib-shellout (~> 2.0)
 
 GIT
   remote: git://github.com/chef/chef.git
@@ -87,6 +164,18 @@ GIT
       ohai
       uuidtools
 
+GIT
+  remote: git://github.com/jkeiser/azure-sdk-for-ruby.git
+  revision: cfeb842805240adbc285bc53df9d4b68ec94712a
+  branch: jk/freeeeedom
+  specs:
+    stuartpreston-azure-sdk-for-ruby (0.7.1)
+      json (~> 1.8)
+      mime-types (> 1, < 4)
+      nokogiri (~> 1.5)
+      systemu (~> 2.6)
+      uuid (~> 2.0)
+
 PATH
   remote: .
   specs:
@@ -97,10 +186,10 @@ PATH
       diff-lcs (~> 1.0)
       ffi-yajl (>= 1.0, < 3.0)
       minitar (~> 0.5.4)
-      mixlib-cli (~> 1.5, < 1.7)
+      mixlib-cli (>= 1.5)
       mixlib-shellout (~> 2.0)
       paint (~> 1.0)
-      solve (~> 2.0, >= 2.0.1)
+      solve (>= 2.0.1, < 4)
 
 GEM
   remote: https://rubygems.org/
@@ -114,50 +203,27 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.4.0)
     app_conf (0.4.2)
+    appbundler (0.9.0)
+      mixlib-cli (~> 1.4)
     artifactory (2.3.3)
     ast (2.3.0)
     autoparse (0.3.3)
       addressable (>= 2.3.1)
       extlib (>= 0.9.15)
       multi_json (>= 1.0.0)
-    aws-sdk (2.4.4)
-      aws-sdk-resources (= 2.4.4)
-    aws-sdk-core (2.4.4)
+    aws-sdk (2.5.0)
+      aws-sdk-resources (= 2.5.0)
+    aws-sdk-core (2.5.0)
       jmespath (~> 1.0)
-    aws-sdk-resources (2.4.4)
-      aws-sdk-core (= 2.4.4)
+    aws-sdk-resources (2.5.0)
+      aws-sdk-core (= 2.5.0)
     aws-sdk-v1 (1.66.0)
       json (~> 1.4)
       nokogiri (>= 1.4.4)
-    berkshelf (4.3.5)
-      addressable (~> 2.3, >= 2.3.4)
-      berkshelf-api-client (~> 2.0, >= 2.0.2)
-      buff-config (~> 1.0)
-      buff-extensions (~> 1.0)
-      buff-shell_out (~> 0.1)
-      celluloid (= 0.16.0)
-      celluloid-io (~> 0.16.1)
-      cleanroom (~> 1.0)
-      faraday (~> 0.9)
-      httpclient (~> 2.7)
-      minitar (~> 0.5, >= 0.5.4)
-      mixlib-archive (~> 0.1)
-      octokit (~> 4.0)
-      retryable (~> 2.0)
-      ridley (~> 4.5)
-      solve (~> 2.0)
-      thor (~> 0.19)
-    berkshelf-api-client (2.0.2)
-      faraday (~> 0.9.1)
-      httpclient (~> 2.7.0)
-      ridley (~> 4.5)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
-    buff-config (1.0.1)
-      buff-extensions (~> 1.0)
-      varia_model (~> 0.4)
-    buff-extensions (1.0.0)
-    buff-ignore (1.1.1)
+    buff-extensions (2.0.0)
+    buff-ignore (1.2.0)
     buff-ruby_engine (0.1.0)
     buff-shell_out (0.2.0)
       buff-ruby_engine (~> 0.1.0)
@@ -168,11 +234,7 @@ GEM
     celluloid-io (0.16.2)
       celluloid (>= 0.16.0)
       nio4r (>= 1.1.0)
-    chef-config (12.12.15)
-      fuzzyurl (~> 0.8.0)
-      mixlib-config (~> 2.0)
-      mixlib-shellout (~> 2.0)
-    chef-provisioning (1.8.0)
+    chef-provisioning (1.8.1)
       cheffish (>= 1.3.1, < 3.0)
       inifile (>= 2.0.2)
       mixlib-install (~> 1.0)
@@ -189,9 +251,9 @@ GEM
     chef-provisioning-azure (0.5.0)
       chef-provisioning (~> 1.0)
       stuartpreston-azure-sdk-for-ruby (~> 0.7)
-    chef-provisioning-fog (0.19.0)
+    chef-provisioning-fog (0.19.1)
       chef-provisioning (~> 1.0)
-      fog (>= 1.38.0)
+      fog (>= 1.37.0)
       fog-softlayer (~> 1.1.0)
       google-api-client (~> 0.8.0)
       retryable
@@ -205,7 +267,7 @@ GEM
       mixlib-log (~> 1.3)
       rack (< 2)
       uuidtools (~> 2.1)
-    cheffish (2.0.4)
+    cheffish (2.0.5)
       chef-zero (~> 4.3)
       compat_resource
     chefspec (4.7.0)
@@ -229,7 +291,7 @@ GEM
       ffi (~> 1.9)
     diff-lcs (1.2.5)
     diffy (3.1.0)
-    docker-api (1.29.2)
+    docker-api (1.30.0)
       excon (>= 0.38.0)
       json
     erubis (2.7.0)
@@ -237,7 +299,7 @@ GEM
     extlib (0.9.16)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    fauxhai (3.6.0)
+    fauxhai (3.7.0)
       net-ssh
     ffi (1.9.14)
     ffi (1.9.14-x86-mingw32)
@@ -288,7 +350,7 @@ GEM
     fog-atmos (0.1.0)
       fog-core
       fog-xml
-    fog-aws (0.10.0)
+    fog-aws (0.11.0)
       fog-core (~> 1.38)
       fog-json (~> 1.0)
       fog-xml (~> 0.1)
@@ -386,7 +448,7 @@ GEM
       treetop (~> 1.4)
       yajl-ruby (~> 1.1)
     formatador (0.2.5)
-    fuzzyurl (0.8.0)
+    fuzzyurl (0.9.0)
     gherkin (4.0.0)
     git (1.3.0)
     google-api-client (0.8.6)
@@ -425,12 +487,12 @@ GEM
     highline (1.7.8)
     hitimes (1.2.4)
     hitimes (1.2.4-x86-mingw32)
-    httpclient (2.7.2)
+    httpclient (2.8.0)
     i18n (0.7.0)
     inflecto (0.0.2)
     inifile (3.0.0)
     iniparse (1.4.2)
-    inspec (0.28.0)
+    inspec (0.28.1)
       hashie (~> 3.4)
       json (~> 1.8)
       method_source (~> 0.8)
@@ -466,7 +528,7 @@ GEM
       chef (>= 11.0.0)
       diffy (>= 3.0.1)
       git (>= 1.2.5)
-    knife-windows (1.4.1)
+    knife-windows (1.5.0)
       winrm (~> 1.7)
     launchy (2.4.3)
       addressable (~> 2.3)
@@ -483,7 +545,9 @@ GEM
       systemu (~> 2.6.2)
     memoist (0.14.0)
     method_source (0.8.2)
-    mime-types (2.99.2)
+    mime-types (3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2016.0521)
     mini_portile2 (2.1.0)
     minitar (0.5.4)
     minitest (5.9.0)
@@ -491,19 +555,19 @@ GEM
       mixlib-log
     mixlib-authentication (1.4.1)
       mixlib-log
-    mixlib-cli (1.6.0)
+    mixlib-cli (1.7.0)
     mixlib-config (2.2.1)
     mixlib-install (1.1.0)
       artifactory
       mixlib-shellout
       mixlib-versioning
-    mixlib-log (1.6.0)
+    mixlib-log (1.7.0)
     mixlib-shellout (2.2.6)
     mixlib-shellout (2.2.6-universal-mingw32)
       win32-process (~> 0.8.2)
       wmi-lite (~> 1.0)
     mixlib-versioning (1.1.0)
-    molinillo (0.4.5)
+    molinillo (0.5.0)
     multi_json (1.12.1)
     multipart-post (2.0.0)
     nenv (0.3.0)
@@ -531,7 +595,7 @@ GEM
       shellany (~> 0.0)
     octokit (4.3.0)
       sawyer (~> 0.7.0, >= 0.5.3)
-    ohai (8.17.1)
+    ohai (8.18.0)
       chef-config (>= 12.5.0.alpha.1, < 13)
       ffi (~> 1.9)
       ffi-yajl (~> 2.2)
@@ -581,40 +645,22 @@ GEM
     rdp-ruby-wmi (0.3.1)
     retriable (1.4.1)
     retryable (2.0.4)
-    ridley (4.6.0)
-      addressable
-      buff-config (~> 1.0)
-      buff-extensions (~> 1.0)
-      buff-ignore (~> 1.1)
-      buff-shell_out (~> 0.1)
-      celluloid (~> 0.16.0)
-      celluloid-io (~> 0.16.1)
-      chef-config (>= 12.5.0)
-      erubis
-      faraday (~> 0.9.0)
-      hashie (>= 2.0.2, < 4.0.0)
-      httpclient (~> 2.7)
-      json (>= 1.7.7)
-      mixlib-authentication (>= 1.3.0)
-      retryable (~> 2.0)
-      semverse (~> 1.1)
-      varia_model (~> 0.4.0)
-    rspec (3.4.0)
-      rspec-core (~> 3.4.0)
-      rspec-expectations (~> 3.4.0)
-      rspec-mocks (~> 3.4.0)
-    rspec-core (3.4.4)
-      rspec-support (~> 3.4.0)
-    rspec-expectations (3.4.0)
+    rspec (3.5.0)
+      rspec-core (~> 3.5.0)
+      rspec-expectations (~> 3.5.0)
+      rspec-mocks (~> 3.5.0)
+    rspec-core (3.5.2)
+      rspec-support (~> 3.5.0)
+    rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.4.0)
+      rspec-support (~> 3.5.0)
     rspec-its (1.2.0)
       rspec-core (>= 3.0.0)
       rspec-expectations (>= 3.0.0)
-    rspec-mocks (3.4.1)
+    rspec-mocks (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
-      rspec-support (~> 3.4.0)
-    rspec-support (3.4.1)
+      rspec-support (~> 3.5.0)
+    rspec-support (3.5.0)
     rspec_junit_formatter (0.2.3)
       builder (< 4)
       rspec-core (>= 2, < 4, != 2.12.0)
@@ -627,7 +673,7 @@ GEM
     ruby-prof (0.15.9)
     ruby-progressbar (1.8.1)
     ruby-shadow (2.5.0)
-    ruby_dep (1.3.1)
+    ruby_dep (1.4.0)
     rubyntlm (0.6.0)
     rubyzip (1.2.0)
     rufus-lru (1.1.0)
@@ -635,7 +681,7 @@ GEM
     sawyer (0.7.0)
       addressable (>= 2.3.5, < 2.5)
       faraday (~> 0.8, < 0.10)
-    semverse (1.2.1)
+    semverse (2.0.0)
     serverspec (2.36.0)
       multi_json
       rspec (~> 3.0)
@@ -649,20 +695,11 @@ GEM
       jwt (~> 1.5)
       multi_json (~> 1.10)
     slop (3.6.0)
-    solve (2.0.3)
-      molinillo (~> 0.4.2)
-      semverse (~> 1.1)
-    specinfra (2.60.2)
+    specinfra (2.60.3)
       net-scp
       net-ssh (>= 2.7, < 4.0)
       net-telnet
       sfl
-    stuartpreston-azure-sdk-for-ruby (0.7.1)
-      json (~> 1.8)
-      mime-types (~> 2.0)
-      nokogiri (~> 1.5)
-      systemu (~> 2.6)
-      uuid (~> 2.0)
     syslog-logger (1.6.8)
     systemu (2.6.5)
     test-kitchen (1.10.2)
@@ -694,8 +731,8 @@ GEM
     uuid (2.3.8)
       macaddr (~> 1.0)
     uuidtools (2.1.5)
-    varia_model (0.4.1)
-      buff-extensions (~> 1.0)
+    varia_model (0.6.0)
+      buff-extensions (~> 2.0)
       hashie (>= 2.0.2, < 4.0.0)
     win32-api (1.5.3-universal-mingw32)
     win32-dir (0.5.1)
@@ -747,10 +784,13 @@ PLATFORMS
 
 DEPENDENCIES
   activesupport (< 5.0)
-  appbundler!
+  appbundler
   artifactory
-  berkshelf
+  berkshelf!
+  berkshelf-api-client!
+  buff-config!
   chef!
+  chef-config!
   chef-dk!
   chef-provisioning (>= 1.7.0)
   chef-provisioning-aws (>= 1.8.0)
@@ -791,16 +831,19 @@ DEPENDENCIES
   rb-readline
   rdoc
   rdp-ruby-wmi
-  rspec-core (= 3.4.4)
+  ridley!
+  rspec-core
   rubocop
   ruby-prof
   ruby-shadow
+  solve!
+  stuartpreston-azure-sdk-for-ruby!
   test-kitchen
   win32-api
   win32-dir
   win32-event
   win32-mutex
-  win32-process (~> 0.8.2)
+  win32-process (>= 0.8.2)
   win32-service
   windows-api
   windows-pr

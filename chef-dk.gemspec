@@ -39,7 +39,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency "mixlib-cli", "~> 1.5", "< 1.7"
+  gem.add_dependency "mixlib-cli", ">= 1.5"
   gem.add_dependency "mixlib-shellout", "~> 2.0"
   gem.add_dependency "ffi-yajl", ">= 1.0", "< 3.0"
 
@@ -47,7 +47,7 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency "chef", "~> 12.5"
 
-  gem.add_dependency "solve", "~> 2.0", ">= 2.0.1"
+  gem.add_dependency "solve", ">= 2.0.1", "< 4"
 
   gem.add_dependency "cookbook-omnifetch", "~> 0.2", ">= 0.2.2"
 

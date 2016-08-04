@@ -27,8 +27,7 @@ gem "chef-dk", path: "."
 # EXPERIMENTAL: ALL gems specified here will be installed in chef-dk omnibus.
 # This represents all gems that will be part of chef-dk.
 
-# TODO remove this when we update Chef to use the new api exposed in 3.5.1
-gem "rspec-core", "= 3.4.4"
+gem "rspec-core"
 
 group(:omnibus_package, :development, :test) do
   gem "pry"
@@ -44,8 +43,13 @@ end
 # since that's not expressible here, we make it >= the last *known* version to
 # at least prevent downgrades beyond that:
 group(:omnibus_package) do
-  gem "appbundler", github: "chef/appbundler" # until next release with multiple-gem support
-  gem "berkshelf"
+  gem "appbundler"
+  gem "berkshelf", github: "berkshelf/berkshelf", branch: "jk/freeeeedom"
+  gem "berkshelf-api-client", github: "berkshelf/berkshelf-api-client", branch: "jk/freeeeedom"
+  gem "ridley", github: "berkshelf/ridley", branch: "jk/freeeeedom"
+  gem "buff-config", github: "berkshelf/buff-config", branch: "jk/freeeeedom"
+  gem "solve", github: "berkshelf/solve", branch: "jk/freeeeedom"
+  gem "stuartpreston-azure-sdk-for-ruby", github: "jkeiser/azure-sdk-for-ruby", branch: "jk/freeeeedom"
   # Chef 12.8.1 Gem includes some extra files which can break gem installation on
   # windows. For now we are pulling chef from github at the tag as a workaround.
   gem "chef-provisioning", ">= 1.7.0"
@@ -56,6 +60,7 @@ group(:omnibus_package) do
   gem "chef-vault"
   # The chef version is pinned by "rake dependencies", which grabs the current version from omnibus.
   gem "chef", github: "chef/chef", branch: "v12.12.15"
+  gem "chef-config", github: "chef/chef", branch: "jk/msys2"
   gem "cheffish", ">= 2.0.3"
   gem "chefspec"
   gem "fauxhai"
@@ -114,6 +119,6 @@ platforms :mswin, :mingw do
   gem "win32-dir"
   gem "win32-event"
   gem "win32-mutex"
-  gem "win32-process", "~> 0.8.2"
+  gem "win32-process", ">= 0.8.2"
   gem "win32-service"
 end
