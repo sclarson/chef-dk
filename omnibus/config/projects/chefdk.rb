@@ -42,7 +42,7 @@ dependency "preparation"
 
 # All actual dependencies are in chef-dk-complete, so that the addition
 # or removal of a dependency doesn't dirty the entire project file
-dependency "chef-dk-complete"
+# dependency "chef-dk-complete"
 
 package :rpm do
   signing_passphrase ENV['OMNIBUS_RPM_SIGNING_PASSPHRASE']
